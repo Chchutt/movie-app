@@ -18,6 +18,5 @@ export async function getMovieGanresData() {
     'https://api.themoviedb.org/3/genre/movie/list?api_key=dd9a14f262f150d795284bd8afed1534&language=en-US'
   );
   const body = await res.json();
-  console.log(body);
   return body;
 }

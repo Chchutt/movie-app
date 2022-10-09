@@ -9,7 +9,7 @@ import { AppHeader } from '../AppHeader';
 import { debounceUtils } from '../../utils/debounce-utils';
 import { ErrorConnection } from '../ErrorPage';
 import { movieRatedApi } from '../../apis/GuestTokenAPI';
-import { GenreDataProvider } from '../../ContextProvider';
+import { GenreDataProvider } from '../ContextProvider';
 
 export default class App extends React.Component {
   minId = 40;
@@ -96,7 +96,6 @@ export default class App extends React.Component {
     );
   };
   render() {
-    console.log(this.state.data);
     if (this.state.error) {
       return (
         <div className="main-container">
@@ -111,9 +110,7 @@ export default class App extends React.Component {
           <AppHeader
             getMovieRated={() => this.getMovieRated()}
             rated={this.state.rated}
-            value={this.state.value}
             getData={debounceUtils(this.getData, 2000)}
-            sessionId={this.state.sessionId}
             ratedFlag={this.ratedFlag}
           />
           <ItemList

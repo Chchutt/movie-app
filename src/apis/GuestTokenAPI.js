@@ -7,6 +7,7 @@ export async function movieRatedApi() {
   const data = await res.json();
   const token = await data.guest_session_id;
   localStorage.setItem('session_id', token);
+  location.reload();
   return token;
 }
 

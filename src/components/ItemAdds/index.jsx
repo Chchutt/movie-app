@@ -3,7 +3,7 @@ import './index.css';
 import { Rate, Tag } from 'antd';
 
 import { movieRate } from '../../apis/GuestTokenAPI';
-import { GenreDataConsumer } from '../../ContextProvider';
+import { GenreDataConsumer } from '../ContextProvider';
 
 export class ItemAdds extends React.Component {
   state = {
@@ -52,10 +52,6 @@ export class ItemAdds extends React.Component {
     }
   };
 
-  genresChoice = (genres, id) => {
-    console.log(id);
-    console.log(genres);
-  };
   componentDidMount() {
     this.colorChanger(this.props.circleRate);
   }

@@ -1,11 +1,12 @@
 import React from 'react';
+import PropType from 'prop-types';
 
 import { ItemAdds } from '../ItemAdds';
 import './index.css';
 
 export class Item extends React.Component {
   imageChecker = () => {
-    if (this.props.avatar === null) {
+    if (!this.props.avatar) {
       return <img className="preview" src={'/img/no-image.svg'} alt={'pic'} />;
     } else {
       return <img className="preview" src={`https://image.tmdb.org/t/p/w500/${this.props.avatar}`} alt={'pic'} />;
@@ -35,3 +36,18 @@ export class Item extends React.Component {
     );
   }
 }
+Item.propTypes = {
+  genre_ids: PropType.array,
+  circleRate: PropType.number,
+  rated: PropType.bool,
+  rating: PropType.number,
+  vote: PropType.number,
+  sessionId: PropType.string,
+  filmsArray: PropType.array,
+  loading: PropType.bool,
+  id: PropType.number,
+  avatar: PropType.string,
+  date: PropType.string,
+  title: PropType.string,
+  description: PropType.string,
+};

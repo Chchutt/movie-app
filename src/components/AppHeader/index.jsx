@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs } from 'antd';
+import PropType from 'prop-types';
 
 import './index.css';
 
@@ -76,3 +77,10 @@ export class AppHeader extends React.Component {
     );
   }
 }
+
+AppHeader.propTypes = {
+  getMovieRated: PropType.func,
+  rated: PropType.bool,
+  getData: PropType.func,
+  ratedFlag: PropType.func,
+};

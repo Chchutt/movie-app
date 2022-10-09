@@ -1,5 +1,6 @@
 import React from 'react';
 import { Spin } from 'antd';
+import PropType from 'prop-types';
 
 import { Item } from '../Item';
 import './index.css';
@@ -57,3 +58,17 @@ export class ItemList extends React.Component {
     }
   }
 }
+
+ItemList.propTypes = {
+  rated: PropType.bool,
+  dataRated: PropType.array,
+  sessionId: PropType.string,
+  filmsArray: PropType.array,
+  minValue: PropType.number,
+  maxValue: PropType.number,
+  data: PropType.array,
+  loading: PropType.bool,
+  onError: PropType.func,
+  error: PropType.bool,
+  shortText: PropType.func,
+};
