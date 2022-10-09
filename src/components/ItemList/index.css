@@ -1,0 +1,15 @@
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1010px;
+    height: 960px;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+.spinner{
+    width: 1010px;
+    height: 1147px;
+    text-align: center;
+}

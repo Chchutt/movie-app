@@ -1,0 +1,14 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    width: 454px;
+    height: 281px;
+    margin: 16px 0 16px 0 ;
+    padding: 3px;
+    box-shadow: 0 4px 12px 0 #00000026;
+
+}
+.preview{
+    width: 183px;
+    height: 281px;
+}

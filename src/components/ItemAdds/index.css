@@ -1,0 +1,58 @@
+.adds {
+  display: flex;
+  position: relative;
+  margin: 0 20px 0 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 228px;
+  height: 260px;
+}
+.btn-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: left;
+}
+.btn {
+  margin-right: 8px;
+  height: 20px;
+  width: auto;
+  text-align: center;
+}
+.text {
+  height: 129px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.date {
+  color: #827e7e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.title {
+  font-size: 20px;
+  max-width: 210px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.round {
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+  border-radius: 50%;
+  background: white;
+  line-height: 22px;
+  font-size: 12px;
+  text-align: center;
+  top: 0;
+  position: absolute;
+  left: 215px;
+}
