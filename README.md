@@ -1,1 +1,1 @@
-Vercel: https://movie-app1-theta.vercel.app/
+Vercel: https://movie-app1-chchutt.vercel.app/
