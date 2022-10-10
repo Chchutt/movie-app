@@ -6,9 +6,20 @@
     margin: 16px 0 16px 0 ;
     padding: 3px;
     box-shadow: 0 4px 12px 0 #00000026;
+    @media (max-width: 420px) {
+        width: 387px;
+        height: 245px;
+
+    }
 
 }
 .preview{
     width: 183px;
     height: 281px;
+    @media (max-width: 420px){
+        margin-left: 5px;
+
+        height: 112px;
+    }
 }
+

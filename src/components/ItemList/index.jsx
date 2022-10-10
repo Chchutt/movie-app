@@ -3,7 +3,7 @@ import { Spin } from 'antd';
 import PropType from 'prop-types';
 
 import { Item } from '../Item';
-import './index.css';
+import './index.scss';
 import { ErrorAlert } from '../ErrorPage';
 
 export class ItemList extends React.Component {

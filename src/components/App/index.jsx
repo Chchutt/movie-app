@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pagination } from 'antd';
 
-import './index.css';
+import './index.scss';
 import { ItemList } from '../ItemList';
 import { getMovieData, getMovieGanresData } from '../../apis/MovieAPI';
 import { AppHeader } from '../AppHeader';

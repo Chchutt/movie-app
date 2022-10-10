@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 import { Rate, Tag } from 'antd';
 
 import { movieRate } from '../../apis/GuestTokenAPI';
@@ -75,7 +75,7 @@ export class ItemAdds extends React.Component {
                 {this.props.circleRate.toPrecision(2)}
               </div>
               <span className="ad title">{title}</span>
-
+              <span className="ad date">{date}</span>
               <div className="btn-container">
                 {films.slice(0, 2).map((elem, index) => {
                   return (
@@ -85,19 +85,20 @@ export class ItemAdds extends React.Component {
                   );
                 })}
               </div>
-              <span className="ad date">{date}</span>
               <span className="ad text">{description}</span>
-              <Rate
-                allowHalf={true}
-                count={10}
-                onChange={(value) => {
-                  this.onRateChange(value);
+              <div className="stars">
+                <Rate
+                  allowHalf={true}
+                  count={10}
+                  onChange={(value) => {
+                    this.onRateChange(value);
 
-                  movieRate({ id, sessionId, value });
-                }}
-                style={{ paddingTop: '3px', fontSize: '15px' }}
-                value={this.state.value || 0}
-              />
+                    movieRate({ id, sessionId, value });
+                  }}
+                  style={{ paddingTop: '3px', fontSize: '15px' }}
+                  value={this.state.value || 0}
+                />
+              </div>
             </div>
           );
         }}

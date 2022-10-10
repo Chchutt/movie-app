@@ -1,9 +1,0 @@
-root{
-    display: flex;
-    width: 995px;
-    height: 1147px;
-    background: #FFFFFF;
-}
-.main-container{
-    overflow: hidden;
-}

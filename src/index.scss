@@ -4,4 +4,8 @@
     margin: 0 auto 0 auto;
     width: 1010px;
     height: 1147px;
+    @media (max-width: 420px) {
+        width: 420px;
+        height: 1755px;
+    }
 }

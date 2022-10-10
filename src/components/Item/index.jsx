@@ -2,7 +2,7 @@ import React from 'react';
 import PropType from 'prop-types';
 
 import { ItemAdds } from '../ItemAdds';
-import './index.css';
+import './index.scss';
 
 export class Item extends React.Component {
   imageChecker = () => {
