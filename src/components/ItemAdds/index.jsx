@@ -12,7 +12,8 @@ export class ItemAdds extends React.Component {
     value: this.props.vote,
     color: '',
   };
-  onRateChange = (value) => {
+  onRateChange = (value, id) => {
+    localStorage.setItem(id, value);
     this.setState((prevState) => {
       return {
         ...prevState,
@@ -57,6 +58,7 @@ export class ItemAdds extends React.Component {
   }
   render() {
     const { title, date, description, id, sessionId, genre_ids } = this.props;
+    console.log(id);
     return (
       <GenreDataConsumer>
         {(genres) => {
@@ -91,12 +93,12 @@ export class ItemAdds extends React.Component {
                   allowHalf={true}
                   count={10}
                   onChange={(value) => {
-                    this.onRateChange(value);
+                    this.onRateChange(value, id);
 
                     movieRate({ id, sessionId, value });
                   }}
                   style={{ paddingTop: '3px', fontSize: '15px' }}
-                  value={this.state.value || 0}
+                  value={this.state.value || +localStorage.getItem(id)}
                 />
               </div>
             </div>
