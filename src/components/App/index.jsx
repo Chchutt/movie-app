@@ -61,6 +61,15 @@ export default class App extends React.Component {
   componentDidMount() {
     getMovieGanresData().then((res) => this.setState((prevState) => ({ ...prevState, genres: res.genres })));
     this.getData('return');
+    const limit = 24 * 3600 * 1000;
+    let localStorageInitTime = localStorage.getItem('localStorageInitTime'); // обновление session_id при бездействии > 24 часов
+    if (localStorageInitTime === null) {
+      localStorage.setItem('localStorageInitTime', +new Date());
+    } else if (+new Date() - localStorageInitTime > limit) localStorage.clear();
+    localStorage.setItem('localStorageInitTime', +new Date());
+    if (!localStorage.getItem('session_id')) {
+      movieRatedApi();
+    }
   }
 
   getData = (text = ' ') => {
